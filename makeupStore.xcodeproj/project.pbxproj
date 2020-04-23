@@ -13,6 +13,14 @@
 		381CDB002451B1B5009673BF /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 381CDAFE2451B1B5009673BF /* Main.storyboard */; };
 		381CDB022451B1B6009673BF /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 381CDB012451B1B6009673BF /* Assets.xcassets */; };
 		381CDB052451B1B6009673BF /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 381CDB032451B1B6009673BF /* LaunchScreen.storyboard */; };
+		381CDB0D2451B24D009673BF /* NetworkLayer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 381CDB0C2451B24D009673BF /* NetworkLayer.swift */; };
+		381CDB0F2451B3EB009673BF /* Makeup.swift in Sources */ = {isa = PBXBuildFile; fileRef = 381CDB0E2451B3EB009673BF /* Makeup.swift */; };
+		381CDB122451CA54009673BF /* BannerTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 381CDB102451CA54009673BF /* BannerTableViewCell.swift */; };
+		381CDB132451CA54009673BF /* BannerTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 381CDB112451CA54009673BF /* BannerTableViewCell.xib */; };
+		381CDB362451D1EC009673BF /* DiscoverTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 381CDB342451D1EC009673BF /* DiscoverTableViewCell.swift */; };
+		381CDB372451D1EC009673BF /* DiscoverTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 381CDB352451D1EC009673BF /* DiscoverTableViewCell.xib */; };
+		381CDB3A2451D2D2009673BF /* DiscoverCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 381CDB382451D2D2009673BF /* DiscoverCollectionViewCell.swift */; };
+		381CDB3B2451D2D2009673BF /* DiscoverCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 381CDB392451D2D2009673BF /* DiscoverCollectionViewCell.xib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -24,6 +32,14 @@
 		381CDB012451B1B6009673BF /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		381CDB042451B1B6009673BF /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		381CDB062451B1B6009673BF /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		381CDB0C2451B24D009673BF /* NetworkLayer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkLayer.swift; sourceTree = "<group>"; };
+		381CDB0E2451B3EB009673BF /* Makeup.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Makeup.swift; sourceTree = "<group>"; };
+		381CDB102451CA54009673BF /* BannerTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BannerTableViewCell.swift; sourceTree = "<group>"; };
+		381CDB112451CA54009673BF /* BannerTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = BannerTableViewCell.xib; sourceTree = "<group>"; };
+		381CDB342451D1EC009673BF /* DiscoverTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DiscoverTableViewCell.swift; sourceTree = "<group>"; };
+		381CDB352451D1EC009673BF /* DiscoverTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = DiscoverTableViewCell.xib; sourceTree = "<group>"; };
+		381CDB382451D2D2009673BF /* DiscoverCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DiscoverCollectionViewCell.swift; sourceTree = "<group>"; };
+		381CDB392451D2D2009673BF /* DiscoverCollectionViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = DiscoverCollectionViewCell.xib; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -63,6 +79,14 @@
 				381CDB012451B1B6009673BF /* Assets.xcassets */,
 				381CDB032451B1B6009673BF /* LaunchScreen.storyboard */,
 				381CDB062451B1B6009673BF /* Info.plist */,
+				381CDB0C2451B24D009673BF /* NetworkLayer.swift */,
+				381CDB0E2451B3EB009673BF /* Makeup.swift */,
+				381CDB102451CA54009673BF /* BannerTableViewCell.swift */,
+				381CDB112451CA54009673BF /* BannerTableViewCell.xib */,
+				381CDB342451D1EC009673BF /* DiscoverTableViewCell.swift */,
+				381CDB352451D1EC009673BF /* DiscoverTableViewCell.xib */,
+				381CDB382451D2D2009673BF /* DiscoverCollectionViewCell.swift */,
+				381CDB392451D2D2009673BF /* DiscoverCollectionViewCell.xib */,
 			);
 			path = makeupStore;
 			sourceTree = "<group>";
@@ -125,7 +149,10 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				381CDB372451D1EC009673BF /* DiscoverTableViewCell.xib in Resources */,
+				381CDB3B2451D2D2009673BF /* DiscoverCollectionViewCell.xib in Resources */,
 				381CDB052451B1B6009673BF /* LaunchScreen.storyboard in Resources */,
+				381CDB132451CA54009673BF /* BannerTableViewCell.xib in Resources */,
 				381CDB022451B1B6009673BF /* Assets.xcassets in Resources */,
 				381CDB002451B1B5009673BF /* Main.storyboard in Resources */,
 			);
@@ -138,8 +165,13 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				381CDB0D2451B24D009673BF /* NetworkLayer.swift in Sources */,
 				381CDAFD2451B1B5009673BF /* ViewController.swift in Sources */,
+				381CDB3A2451D2D2009673BF /* DiscoverCollectionViewCell.swift in Sources */,
+				381CDB0F2451B3EB009673BF /* Makeup.swift in Sources */,
+				381CDB122451CA54009673BF /* BannerTableViewCell.swift in Sources */,
 				381CDAF92451B1B5009673BF /* AppDelegate.swift in Sources */,
+				381CDB362451D1EC009673BF /* DiscoverTableViewCell.swift in Sources */,
 				381CDAFB2451B1B5009673BF /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
