@@ -60,5 +60,19 @@ class NetworkLayer {
         
     }
     
+    func fetchMakeupListJSON(successHandler: @escaping ([Makeup]) -> Void, errorHandler: @escaping (Error) -> Void) {
+        let path = Bundle.main.path(forResource: "makeup", ofType: "json")!
+        let data = try! Data(contentsOf: URL(fileURLWithPath: path))
+        do {
+            let makeupList = try JSONDecoder().decode([Makeup].self, from: data)
+            print(makeupList)
+            DispatchQueue.main.async {
+                successHandler(makeupList)
+            }
+        } catch {
+            
+        }
+    }
+    
 }
 

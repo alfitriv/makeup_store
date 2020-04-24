@@ -18,7 +18,28 @@
                 <subviews>
                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="HL4-aE-Tp2">
                         <rect key="frame" x="0.0" y="0.0" width="149" height="137"/>
+                        <subviews>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="pink_marble" translatesAutoresizingMaskIntoConstraints="NO" id="q7o-QR-MAS">
+                                <rect key="frame" x="0.0" y="0.0" width="149" height="137"/>
+                            </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="2Pe-7H-mHA">
+                                <rect key="frame" x="8" y="8" width="133" height="121"/>
+                                <fontDescription key="fontDescription" name="Farah" family="Farah" pointSize="20"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
                         <color key="backgroundColor" red="0.82738025049999997" green="0.64574895880000005" blue="0.83484692260000004" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                        <constraints>
+                            <constraint firstAttribute="bottom" secondItem="q7o-QR-MAS" secondAttribute="bottom" id="651-Nd-bkv"/>
+                            <constraint firstItem="q7o-QR-MAS" firstAttribute="top" secondItem="HL4-aE-Tp2" secondAttribute="top" id="Cpz-VG-eKE"/>
+                            <constraint firstAttribute="bottom" secondItem="2Pe-7H-mHA" secondAttribute="bottom" constant="8" id="Ps8-an-8Ad"/>
+                            <constraint firstItem="2Pe-7H-mHA" firstAttribute="leading" secondItem="HL4-aE-Tp2" secondAttribute="leading" constant="8" id="bkL-Ps-xqx"/>
+                            <constraint firstAttribute="trailing" secondItem="q7o-QR-MAS" secondAttribute="trailing" id="cwD-L4-CKN"/>
+                            <constraint firstItem="q7o-QR-MAS" firstAttribute="leading" secondItem="HL4-aE-Tp2" secondAttribute="leading" id="gvj-LQ-gig"/>
+                            <constraint firstItem="2Pe-7H-mHA" firstAttribute="top" secondItem="HL4-aE-Tp2" secondAttribute="top" constant="8" id="pUE-xf-zVz"/>
+                            <constraint firstAttribute="trailing" secondItem="2Pe-7H-mHA" secondAttribute="trailing" constant="8" id="phd-fL-5aq"/>
+                        </constraints>
                     </view>
                 </subviews>
             </view>
@@ -30,7 +51,13 @@
             </constraints>
             <viewLayoutGuide key="safeArea" id="ZTg-uK-7eu"/>
             <size key="customSize" width="149" height="137"/>
+            <connections>
+                <outlet property="textLabel" destination="2Pe-7H-mHA" id="vJ2-zJ-iMD"/>
+            </connections>
             <point key="canvasLocation" x="209.42028985507247" y="181.80803571428569"/>
         </collectionViewCell>
     </objects>
+    <resources>
+        <image name="pink_marble" width="825" height="535"/>
+    </resources>
 </document>

@@ -21,6 +21,7 @@
 		381CDB372451D1EC009673BF /* DiscoverTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 381CDB352451D1EC009673BF /* DiscoverTableViewCell.xib */; };
 		381CDB3A2451D2D2009673BF /* DiscoverCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 381CDB382451D2D2009673BF /* DiscoverCollectionViewCell.swift */; };
 		381CDB3B2451D2D2009673BF /* DiscoverCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 381CDB392451D2D2009673BF /* DiscoverCollectionViewCell.xib */; };
+		381CDB3F2452DDD3009673BF /* makeup.json in Resources */ = {isa = PBXBuildFile; fileRef = 381CDB3E2452DDD3009673BF /* makeup.json */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -40,6 +41,7 @@
 		381CDB352451D1EC009673BF /* DiscoverTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = DiscoverTableViewCell.xib; sourceTree = "<group>"; };
 		381CDB382451D2D2009673BF /* DiscoverCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DiscoverCollectionViewCell.swift; sourceTree = "<group>"; };
 		381CDB392451D2D2009673BF /* DiscoverCollectionViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = DiscoverCollectionViewCell.xib; sourceTree = "<group>"; };
+		381CDB3E2452DDD3009673BF /* makeup.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = makeup.json; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -87,6 +89,7 @@
 				381CDB352451D1EC009673BF /* DiscoverTableViewCell.xib */,
 				381CDB382451D2D2009673BF /* DiscoverCollectionViewCell.swift */,
 				381CDB392451D2D2009673BF /* DiscoverCollectionViewCell.xib */,
+				381CDB3E2452DDD3009673BF /* makeup.json */,
 			);
 			path = makeupStore;
 			sourceTree = "<group>";
@@ -149,6 +152,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				381CDB3F2452DDD3009673BF /* makeup.json in Resources */,
 				381CDB372451D1EC009673BF /* DiscoverTableViewCell.xib in Resources */,
 				381CDB3B2451D2D2009673BF /* DiscoverCollectionViewCell.xib in Resources */,
 				381CDB052451B1B6009673BF /* LaunchScreen.storyboard in Resources */,

@@ -19,12 +19,22 @@ class ViewController: UIViewController {
     var networkLayer = NetworkLayer.shared
     var makeupList: [Makeup] = []
     var sections: [HomeSections] = []
+    var brands: [String]?
     @IBOutlet weak var tableView: UITableView!
+    @IBOutlet weak var progressIndicator: UIActivityIndicatorView!
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        networkLayer.fetchMakeUpList(successHandler: { [weak self] (makeup) in
+        
+        progressIndicator.isHidden = false
+        progressIndicator.startAnimating()
+        networkLayer.fetchMakeupListJSON(successHandler: { [weak self] (makeup) in
             self?.makeupList = makeup
+            let filteredBrands = self?.makeupList.compactMap { $0.brand }
+            self?.brands = filteredBrands?.removingDuplicates()
+            self?.progressIndicator.isHidden = true
+            self?.progressIndicator.stopAnimating()
+            self?.tableView.reloadData()
         }) { (error) in
             print(error)
         }
@@ -36,10 +46,21 @@ class ViewController: UIViewController {
             HomeSections.bestSellers
         ]
         
+        //brands = makeupList.compactMap { $0.brand }
+        
         tableView.tableFooterView = UIView(frame: .zero)
         
         tableView.register(UINib(nibName: "BannerTableViewCell", bundle: nil), forCellReuseIdentifier: "Banner")
         tableView.register(UINib(nibName: "DiscoverTableViewCell", bundle: nil), forCellReuseIdentifier: "Discover")
+        
+        self.tableView.separatorStyle = UITableViewCell.SeparatorStyle.none
+        
+        tableView.reloadData()
+        
+    }
+    
+    override func viewWillAppear(_ animated: Bool) {
+    
     }
 }
 
@@ -72,6 +93,7 @@ extension ViewController: UITableViewDelegate, UITableViewDataSource {
             return cell
         case .discover:
             let cell = tableView.dequeueReusableCell(withIdentifier: "Discover", for: indexPath) as! DiscoverTableViewCell
+            cell.brands = brands
             return cell
         case .newArrivals:
             let cell = UITableViewCell()
@@ -93,5 +115,44 @@ extension ViewController: UITableViewDelegate, UITableViewDataSource {
         }
     }
     
+    func tableView(_ tableView: UITableView, viewForHeaderInSection section: Int) -> UIView? {
+        let section = sections[section]
+        let myLabel = UILabel()
+        myLabel.frame = CGRect(x: 16, y: -8, width: 320, height: 20)
+        myLabel.font = UIFont.boldSystemFont(ofSize: 24)
+
+        let headerView = UIView()
+        headerView.addSubview(myLabel)
+        
+        switch section {
+        case .bestSellers:
+            myLabel.text = "Best Sellers"
+            return headerView
+        case .discover:
+            myLabel.text = "Discover"
+            return headerView
+        case .newArrivals:
+            myLabel.text = "New Arrivals"
+            return headerView
+        default:
+            return nil
+        }
+    }
     
+    
+    
+}
+
+extension Array where Element: Hashable {
+    func removingDuplicates() -> [Element] {
+        var addedDict = [Element: Bool]()
+
+        return filter {
+            addedDict.updateValue(true, forKey: $0) == nil
+        }
+    }
+
+    mutating func removeDuplicates() {
+        self = self.removingDuplicates()
+    }
 }

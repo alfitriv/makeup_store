@@ -10,9 +10,15 @@ import UIKit
 
 class DiscoverCollectionViewCell: UICollectionViewCell {
 
+    @IBOutlet weak var textLabel: UILabel!
+    
     override func awakeFromNib() {
         super.awakeFromNib()
-        // Initialization code
+        self.layer.cornerRadius = 8
+    }
+    
+    func setupLabel(brand: String) {
+        textLabel.text = brand
     }
 
 }
