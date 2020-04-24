@@ -46,12 +46,12 @@ class ViewController: UIViewController {
             HomeSections.bestSellers
         ]
         
-        //brands = makeupList.compactMap { $0.brand }
-        
         tableView.tableFooterView = UIView(frame: .zero)
         
         tableView.register(UINib(nibName: "BannerTableViewCell", bundle: nil), forCellReuseIdentifier: "Banner")
         tableView.register(UINib(nibName: "DiscoverTableViewCell", bundle: nil), forCellReuseIdentifier: "Discover")
+        tableView.register(UINib(nibName: "NewArrivalsTableViewCell", bundle: nil), forCellReuseIdentifier: "NewArrivals")
+        tableView.register(UINib(nibName: "BestSellersTableViewCell", bundle: nil), forCellReuseIdentifier: "BestSellers")
         
         self.tableView.separatorStyle = UITableViewCell.SeparatorStyle.none
         
@@ -96,10 +96,11 @@ extension ViewController: UITableViewDelegate, UITableViewDataSource {
             cell.brands = brands
             return cell
         case .newArrivals:
-            let cell = UITableViewCell()
+            let cell = tableView.dequeueReusableCell(withIdentifier: "NewArrivals", for: indexPath) as! NewArrivalsTableViewCell
+            cell.makeupList = makeupList
             return cell
         case .bestSellers:
-            let cell = UITableViewCell()
+            let cell = tableView.dequeueReusableCell(withIdentifier: "BestSellers", for: indexPath) as! BestSellersTableViewCell
             return cell
         }
     }
@@ -110,15 +111,17 @@ extension ViewController: UITableViewDelegate, UITableViewDataSource {
         switch section {
         case .banner:
             return 300
+        case .newArrivals:
+            return 400
         default:
-            return 100
+            return 150
         }
     }
     
     func tableView(_ tableView: UITableView, viewForHeaderInSection section: Int) -> UIView? {
         let section = sections[section]
         let myLabel = UILabel()
-        myLabel.frame = CGRect(x: 16, y: -8, width: 320, height: 20)
+        myLabel.frame = CGRect(x: 16, y: 0, width: 320, height: 20)
         myLabel.font = UIFont.boldSystemFont(ofSize: 24)
 
         let headerView = UIView()

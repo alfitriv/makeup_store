@@ -1,17 +1,16 @@
 //
-//  DiscoverTableViewCell.swift
+//  NewArrivalsTableViewCell.swift
 //  makeupStore
 //
-//  Created by Vania Radmila Alfitri on 23/04/20.
+//  Created by Vania Radmila Alfitri on 24/04/20.
 //  Copyright © 2020 Vania Radmila Alfitri. All rights reserved.
 //
 
 import UIKit
 
-class DiscoverTableViewCell: UITableViewCell {
-
+class NewArrivalsTableViewCell: UITableViewCell {
     @IBOutlet weak var collectionView: UICollectionView!
-    var brands: [String]? {
+    var makeupList: [Makeup]? {
         didSet {
             collectionView.reloadData()
         }
@@ -19,7 +18,8 @@ class DiscoverTableViewCell: UITableViewCell {
     
     override func awakeFromNib() {
         super.awakeFromNib()
-        collectionView.register(UINib(nibName: "DiscoverCollectionViewCell", bundle: nil), forCellWithReuseIdentifier: "DiscoverItem")
+        collectionView.register(UINib(nibName: "NewArrivalCollectionViewCell", bundle: nil), forCellWithReuseIdentifier: "NewArrival")
+        
     }
 
     override func setSelected(_ selected: Bool, animated: Bool) {
@@ -30,21 +30,21 @@ class DiscoverTableViewCell: UITableViewCell {
     
 }
 
-extension DiscoverTableViewCell: UICollectionViewDataSource, UICollectionViewDelegateFlowLayout {
+extension NewArrivalsTableViewCell: UICollectionViewDelegateFlowLayout, UICollectionViewDataSource {
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-        return brands?.count ?? 0
+        makeupList?.count ?? 0
     }
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
-        let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "DiscoverItem", for: indexPath) as! DiscoverCollectionViewCell
-        let brand = brands?[indexPath.row]
-        cell.setupLabel(brand: brand ?? "")
-        return cell 
+        let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "NewArrival", for: indexPath) as! NewArrivalCollectionViewCell
+        let makeup = makeupList?[indexPath.item]
+        cell.setupCellItem(makeup: makeup ?? Makeup(id: 0, brand: "", productType: .blush, imageLink: ""))
+        return cell
     }
     
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
-        return CGSize(width: 110, height: 90)
+        CGSize(width: 150, height: 350)
     }
     
-    
 }
+
