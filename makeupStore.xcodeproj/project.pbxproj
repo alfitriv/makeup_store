@@ -29,6 +29,8 @@
 		386C4770245336D300428780 /* Kingfisher in Frameworks */ = {isa = PBXBuildFile; productRef = 386C476F245336D300428780 /* Kingfisher */; };
 		386C477324533F4F00428780 /* BestSellersTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 386C477124533F4F00428780 /* BestSellersTableViewCell.swift */; };
 		386C477424533F4F00428780 /* BestSellersTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 386C477224533F4F00428780 /* BestSellersTableViewCell.xib */; };
+		386C47772453430300428780 /* BestSellersCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 386C47752453430300428780 /* BestSellersCollectionViewCell.swift */; };
+		386C47782453430300428780 /* BestSellersCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 386C47762453430300428780 /* BestSellersCollectionViewCell.xib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -55,6 +57,8 @@
 		381CDB492452F3D3009673BF /* NewArrivalCollectionViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = NewArrivalCollectionViewCell.xib; sourceTree = "<group>"; };
 		386C477124533F4F00428780 /* BestSellersTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BestSellersTableViewCell.swift; sourceTree = "<group>"; };
 		386C477224533F4F00428780 /* BestSellersTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = BestSellersTableViewCell.xib; sourceTree = "<group>"; };
+		386C47752453430300428780 /* BestSellersCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BestSellersCollectionViewCell.swift; sourceTree = "<group>"; };
+		386C47762453430300428780 /* BestSellersCollectionViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = BestSellersCollectionViewCell.xib; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -110,6 +114,8 @@
 				381CDB492452F3D3009673BF /* NewArrivalCollectionViewCell.xib */,
 				386C477124533F4F00428780 /* BestSellersTableViewCell.swift */,
 				386C477224533F4F00428780 /* BestSellersTableViewCell.xib */,
+				386C47752453430300428780 /* BestSellersCollectionViewCell.swift */,
+				386C47762453430300428780 /* BestSellersCollectionViewCell.xib */,
 			);
 			path = makeupStore;
 			sourceTree = "<group>";
@@ -186,6 +192,7 @@
 				381CDB052451B1B6009673BF /* LaunchScreen.storyboard in Resources */,
 				381CDB132451CA54009673BF /* BannerTableViewCell.xib in Resources */,
 				381CDB022451B1B6009673BF /* Assets.xcassets in Resources */,
+				386C47782453430300428780 /* BestSellersCollectionViewCell.xib in Resources */,
 				381CDB472452EF67009673BF /* NewArrivalsTableViewCell.xib in Resources */,
 				381CDB002451B1B5009673BF /* Main.storyboard in Resources */,
 			);
@@ -203,6 +210,7 @@
 				381CDAFD2451B1B5009673BF /* ViewController.swift in Sources */,
 				381CDB4A2452F3D3009673BF /* NewArrivalCollectionViewCell.swift in Sources */,
 				386C477324533F4F00428780 /* BestSellersTableViewCell.swift in Sources */,
+				386C47772453430300428780 /* BestSellersCollectionViewCell.swift in Sources */,
 				381CDB3A2451D2D2009673BF /* DiscoverCollectionViewCell.swift in Sources */,
 				381CDB0F2451B3EB009673BF /* Makeup.swift in Sources */,
 				381CDB122451CA54009673BF /* BannerTableViewCell.swift in Sources */,

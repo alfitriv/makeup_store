@@ -101,6 +101,7 @@ extension ViewController: UITableViewDelegate, UITableViewDataSource {
             return cell
         case .bestSellers:
             let cell = tableView.dequeueReusableCell(withIdentifier: "BestSellers", for: indexPath) as! BestSellersTableViewCell
+            cell.bestSellers = makeupList
             return cell
         }
     }
@@ -113,6 +114,8 @@ extension ViewController: UITableViewDelegate, UITableViewDataSource {
             return 300
         case .newArrivals:
             return 400
+        case .bestSellers:
+            return 200
         default:
             return 150
         }
