@@ -20,6 +20,13 @@ class ViewController: UIViewController {
     var makeupList: [Makeup] = []
     var sections: [HomeSections] = []
     var brands: [String]?
+    var chosenMakeup: Makeup? {
+        didSet {
+            let detailVC = DetailViewController.init(nibName: "DetailViewController", bundle: nil)
+            detailVC.makeup = chosenMakeup
+            self.navigationController?.pushViewController(detailVC, animated: true)
+        }
+    }
     @IBOutlet weak var tableView: UITableView!
     @IBOutlet weak var progressIndicator: UIActivityIndicatorView!
     
@@ -60,7 +67,7 @@ class ViewController: UIViewController {
     }
     
     override func viewWillAppear(_ animated: Bool) {
-    
+        
     }
 }
 
@@ -101,10 +108,12 @@ extension ViewController: UITableViewDelegate, UITableViewDataSource {
             return cell
         case .bestSellers:
             let cell = tableView.dequeueReusableCell(withIdentifier: "BestSellers", for: indexPath) as! BestSellersTableViewCell
-            cell.bestSellers = makeupList
+            cell.bestSellers = makeupList.filter { $0.brand == "maybelline"}
+            cell.delegate = self
             return cell
         }
     }
+    
     
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
         let section = sections[indexPath.section]
@@ -126,7 +135,7 @@ extension ViewController: UITableViewDelegate, UITableViewDataSource {
         let myLabel = UILabel()
         myLabel.frame = CGRect(x: 16, y: 0, width: 320, height: 20)
         myLabel.font = UIFont.boldSystemFont(ofSize: 24)
-
+        
         let headerView = UIView()
         headerView.addSubview(myLabel)
         
@@ -145,19 +154,24 @@ extension ViewController: UITableViewDelegate, UITableViewDataSource {
         }
     }
     
-    
+}
+
+extension ViewController: BestSellersTableViewCellDelegate {
+    func bestSellersTableViewCell(_ cell: BestSellersTableViewCell, didSelect makeup: Makeup) {
+        chosenMakeup = makeup
+    }
     
 }
 
 extension Array where Element: Hashable {
     func removingDuplicates() -> [Element] {
         var addedDict = [Element: Bool]()
-
+        
         return filter {
             addedDict.updateValue(true, forKey: $0) == nil
         }
     }
-
+    
     mutating func removeDuplicates() {
         self = self.removingDuplicates()
     }

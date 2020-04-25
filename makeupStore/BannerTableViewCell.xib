@@ -19,12 +19,23 @@
                     <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="makeup_banner" translatesAutoresizingMaskIntoConstraints="NO" id="ldU-oa-Qin">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="271"/>
                     </imageView>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Unleash Your Beauty" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="8jO-uS-YaC">
+                        <rect key="frame" x="32" y="32" width="208" height="181.5"/>
+                        <fontDescription key="fontDescription" name="Helvetica-Bold" family="Helvetica" pointSize="52"/>
+                        <color key="textColor" red="0.57522873161388199" green="0.7693973183631897" blue="0.73211802160337436" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                        <nil key="highlightedColor"/>
+                        <color key="shadowColor" cocoaTouchSystemColor="darkTextColor"/>
+                        <size key="shadowOffset" width="0.0" height="-2"/>
+                    </label>
                 </subviews>
                 <constraints>
                     <constraint firstItem="ldU-oa-Qin" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" id="Aoc-IE-1Nu"/>
                     <constraint firstAttribute="bottom" secondItem="ldU-oa-Qin" secondAttribute="bottom" id="Hwf-K0-gA1"/>
+                    <constraint firstItem="8jO-uS-YaC" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="32" id="Vl0-nY-PLv"/>
+                    <constraint firstAttribute="trailing" secondItem="8jO-uS-YaC" secondAttribute="trailing" constant="80" id="XLt-WX-NqD"/>
                     <constraint firstAttribute="trailing" secondItem="ldU-oa-Qin" secondAttribute="trailing" id="eRF-Te-4aD"/>
                     <constraint firstItem="ldU-oa-Qin" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" id="hc8-yE-4nG"/>
+                    <constraint firstItem="8jO-uS-YaC" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" constant="32" id="vPB-Zc-epG"/>
                 </constraints>
             </tableViewCellContentView>
             <viewLayoutGuide key="safeArea" id="njF-e1-oar"/>
