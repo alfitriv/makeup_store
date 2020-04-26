@@ -16,6 +16,7 @@ enum DetailSection {
 
 class DetailViewController: UIViewController {
     var makeup: Makeup?
+    var makeupList: [Makeup]?
     var sections: [DetailSection] = []
     @IBOutlet weak var tableView: UITableView!
     @IBOutlet weak var addToCartView: UIView!
@@ -41,9 +42,11 @@ class DetailViewController: UIViewController {
     
     @objc func tap() {
         let checkoutVC = CheckoutViewController.init(nibName: "CheckoutViewController", bundle: nil)
-//        if let makeup = makeup {
-//            checkoutVC.checkoutItems?.append(makeup)
-//        }
+        if let makeup = makeup {
+            checkoutVC.checkoutItems.append(makeup)
+            checkoutVC.makeupList = makeupList
+        }
+        
         self.navigationController?.pushViewController(checkoutVC, animated: true)
     }
     

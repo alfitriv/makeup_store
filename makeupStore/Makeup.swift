@@ -8,7 +8,7 @@
 
 import Foundation
 
-struct Makeup: Codable {
+struct Makeup: Codable, Equatable {
     var id: Int
     var brand: String?
     var productType: ProductType?

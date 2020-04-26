@@ -24,6 +24,7 @@ class ViewController: UIViewController {
         didSet {
             let detailVC = DetailViewController.init(nibName: "DetailViewController", bundle: nil)
             detailVC.makeup = chosenMakeup
+            detailVC.makeupList = makeupList
             self.navigationController?.pushViewController(detailVC, animated: true)
         }
     }
