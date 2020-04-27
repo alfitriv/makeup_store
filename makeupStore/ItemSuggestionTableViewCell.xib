@@ -16,9 +16,16 @@
                 <rect key="frame" x="0.0" y="0.0" width="320" height="139"/>
                 <autoresizingMask key="autoresizingMask"/>
                 <subviews>
-                    <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="none" translatesAutoresizingMaskIntoConstraints="NO" id="9YW-aJ-BKg">
+                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="undraw_Appreciation_sjc1" translatesAutoresizingMaskIntoConstraints="NO" id="Ysf-Qz-0hA">
+                        <rect key="frame" x="70" y="-61" width="250" height="200"/>
+                        <constraints>
+                            <constraint firstAttribute="width" constant="250" id="ILo-UR-Wi3"/>
+                            <constraint firstAttribute="height" constant="200" id="UtH-VU-08A"/>
+                        </constraints>
+                    </imageView>
+                    <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" dataMode="none" translatesAutoresizingMaskIntoConstraints="NO" id="9YW-aJ-BKg">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="139"/>
-                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <color key="backgroundColor" red="0.82156170686395946" green="0.67815493893938072" blue="0.8020650151952422" alpha="0.43434289383561642" colorSpace="custom" customColorSpace="displayP3"/>
                         <collectionViewFlowLayout key="collectionViewLayout" scrollDirection="horizontal" minimumLineSpacing="10" minimumInteritemSpacing="10" id="Dkr-Vt-dEo">
                             <size key="itemSize" width="50" height="50"/>
                             <size key="headerReferenceSize" width="0.0" height="0.0"/>
@@ -32,7 +39,9 @@
                     </collectionView>
                 </subviews>
                 <constraints>
+                    <constraint firstAttribute="bottom" secondItem="Ysf-Qz-0hA" secondAttribute="bottom" id="C2e-cc-hSm"/>
                     <constraint firstItem="9YW-aJ-BKg" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" id="C3p-Wn-Lz9"/>
+                    <constraint firstAttribute="trailing" secondItem="Ysf-Qz-0hA" secondAttribute="trailing" id="EnK-aS-bIM"/>
                     <constraint firstAttribute="bottom" secondItem="9YW-aJ-BKg" secondAttribute="bottom" id="LIb-QK-yNd"/>
                     <constraint firstItem="9YW-aJ-BKg" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" id="vco-1l-JtF"/>
                     <constraint firstAttribute="trailing" secondItem="9YW-aJ-BKg" secondAttribute="trailing" id="wps-DF-MZg"/>
@@ -45,4 +54,7 @@
             <point key="canvasLocation" x="137.68115942028987" y="178.45982142857142"/>
         </tableViewCell>
     </objects>
+    <resources>
+        <image name="undraw_Appreciation_sjc1" width="391" height="299"/>
+    </resources>
 </document>

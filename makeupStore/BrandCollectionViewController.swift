@@ -17,6 +17,10 @@ class BrandCollectionViewController: UIViewController {
         super.viewDidLoad()
         
         collectionView.register(UINib(nibName: "NewArrivalCollectionViewCell", bundle: nil), forCellWithReuseIdentifier: "BrandCell")
+        
+        if let makeupBrand = makeupList?.first?.brand {
+            navigationItem.title = makeupBrand
+        }
 
     }
 

@@ -39,6 +39,7 @@ class CheckoutViewController: UIViewController {
         tableView.estimatedRowHeight = 300
         
         self.navigationItem.title = "Checkout"
+        self.navigationController?.navigationBar.prefersLargeTitles = true
         
         checkoutButton.layer.cornerRadius = 8
         
@@ -116,14 +117,14 @@ extension CheckoutViewController: UITableViewDataSource, UITableViewDelegate {
         case .pricingInfo:
             return UITableView.automaticDimension
         case .itemSuggestion:
-            return 200
+            return 180
         }
     }
     
     func tableView(_ tableView: UITableView, viewForHeaderInSection section: Int) -> UIView? {
         let section = sections[section]
         let myLabel = UILabel()
-        myLabel.frame = CGRect(x: 16, y: 16, width: 320, height: 24)
+        myLabel.frame = CGRect(x: 16, y: -8, width: 320, height: 24)
         myLabel.font = UIFont.boldSystemFont(ofSize: 20)
         
         let headerView = UIView()

@@ -21,7 +21,7 @@
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
             <subviews>
                 <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" style="grouped" separatorStyle="none" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="18" sectionFooterHeight="18" translatesAutoresizingMaskIntoConstraints="NO" id="5Ku-kE-igJ">
-                    <rect key="frame" x="0.0" y="44" width="414" height="818"/>
+                    <rect key="frame" x="0.0" y="44" width="414" height="699"/>
                     <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                     <connections>
                         <outlet property="dataSource" destination="-1" id="Ahy-fX-v7V"/>
@@ -48,7 +48,7 @@
                 </view>
                 <activityIndicatorView hidden="YES" opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" style="large" translatesAutoresizingMaskIntoConstraints="NO" id="gNV-TE-uXk">
                     <rect key="frame" x="188.5" y="429.5" width="37" height="37"/>
-                    <color key="color" red="0.82738025049999997" green="0.64574895880000005" blue="0.83484692260000004" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                    <color key="color" red="0.39266719529999999" green="0.62442983740000002" blue="0.59497622309999998" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                 </activityIndicatorView>
             </subviews>
             <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
@@ -57,11 +57,11 @@
                 <constraint firstItem="5Ku-kE-igJ" firstAttribute="top" secondItem="fnl-2z-Ty3" secondAttribute="top" id="8R6-cf-bi3"/>
                 <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="c1J-ze-Q8s" secondAttribute="trailing" constant="32" id="Kc6-CA-HRD"/>
                 <constraint firstItem="c1J-ze-Q8s" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" constant="32" id="MoT-zS-acZ"/>
+                <constraint firstItem="c1J-ze-Q8s" firstAttribute="top" secondItem="5Ku-kE-igJ" secondAttribute="bottom" constant="32" id="NpS-31-mYW"/>
                 <constraint firstItem="5Ku-kE-igJ" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" id="UP1-dv-Yka"/>
                 <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="5Ku-kE-igJ" secondAttribute="trailing" id="egj-XQ-Z7D"/>
                 <constraint firstItem="fnl-2z-Ty3" firstAttribute="bottom" secondItem="c1J-ze-Q8s" secondAttribute="bottom" constant="32" id="kPr-ee-jd0"/>
                 <constraint firstItem="gNV-TE-uXk" firstAttribute="centerY" secondItem="i5M-Pr-FkT" secondAttribute="centerY" id="lmg-gQ-LFh"/>
-                <constraint firstItem="fnl-2z-Ty3" firstAttribute="bottom" secondItem="5Ku-kE-igJ" secondAttribute="bottom" id="v2H-rL-2Im"/>
             </constraints>
             <viewLayoutGuide key="safeArea" id="fnl-2z-Ty3"/>
             <point key="canvasLocation" x="137.68115942028987" y="146.65178571428569"/>

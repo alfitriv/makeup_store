@@ -34,7 +34,7 @@ class ViewController: UIViewController {
             let brandCollectionsVC = BrandCollectionViewController.init(nibName: "BrandCollectionViewController", bundle: nil)
             brandCollectionsVC.makeupList = filteredBrand
             self.navigationController?.pushViewController(brandCollectionsVC, animated: true)
-            
+            tableView.reloadData()
         }
     }
     @IBOutlet weak var tableView: UITableView!
@@ -72,13 +72,13 @@ class ViewController: UIViewController {
         
         self.tableView.separatorStyle = UITableViewCell.SeparatorStyle.none
         
+        self.navigationItem.title = "Home"
+        navigationController?.navigationBar.prefersLargeTitles = true
+        
         tableView.reloadData()
         
     }
     
-    override func viewWillAppear(_ animated: Bool) {
-        
-    }
 }
 
 extension ViewController: UITableViewDelegate, UITableViewDataSource {

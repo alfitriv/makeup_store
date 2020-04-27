@@ -35,6 +35,8 @@ class DetailViewController: UIViewController {
         
         tableView.estimatedRowHeight = 300
         
+        self.navigationItem.title = "Overview"
+        
         addToCartView.layer.cornerRadius = 8
         let tapGesture = UITapGestureRecognizer(target: self, action: #selector(tap))
         addToCartView.addGestureRecognizer(tapGesture)
