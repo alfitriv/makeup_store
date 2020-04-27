@@ -20,7 +20,7 @@
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
             <subviews>
                 <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="gJ5-N4-zxF">
-                    <rect key="frame" x="0.0" y="44" width="414" height="818"/>
+                    <rect key="frame" x="0.0" y="44" width="414" height="701.5"/>
                     <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                     <connections>
                         <outlet property="dataSource" destination="-1" id="JO7-YO-O4J"/>
@@ -49,8 +49,8 @@
             <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
             <constraints>
                 <constraint firstItem="HU9-9G-7sg" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" constant="32" id="3bf-Aq-BKz"/>
-                <constraint firstItem="fnl-2z-Ty3" firstAttribute="bottom" secondItem="gJ5-N4-zxF" secondAttribute="bottom" id="4Gm-9i-G0I"/>
                 <constraint firstItem="gJ5-N4-zxF" firstAttribute="top" secondItem="fnl-2z-Ty3" secondAttribute="top" id="9p5-xO-RUG"/>
+                <constraint firstItem="HU9-9G-7sg" firstAttribute="top" secondItem="gJ5-N4-zxF" secondAttribute="bottom" constant="32" id="GFH-vN-wg5"/>
                 <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="gJ5-N4-zxF" secondAttribute="trailing" id="T3P-93-gnZ"/>
                 <constraint firstItem="fnl-2z-Ty3" firstAttribute="bottom" secondItem="HU9-9G-7sg" secondAttribute="bottom" constant="32" id="eSc-Qk-5ZU"/>
                 <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="HU9-9G-7sg" secondAttribute="trailing" constant="32" id="tGc-T9-2Uz"/>

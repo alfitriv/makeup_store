@@ -49,6 +49,10 @@
 		38DA2B702455581100B65221 /* CheckoutItemTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 38DA2B6E2455581100B65221 /* CheckoutItemTableViewCell.xib */; };
 		38DA2B73245566BC00B65221 /* PricingInfoTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 38DA2B71245566BC00B65221 /* PricingInfoTableViewCell.swift */; };
 		38DA2B74245566BC00B65221 /* PricingInfoTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 38DA2B72245566BC00B65221 /* PricingInfoTableViewCell.xib */; };
+		38DA2B772455A9D600B65221 /* PurchaseSuccessViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 38DA2B752455A9D600B65221 /* PurchaseSuccessViewController.swift */; };
+		38DA2B782455A9D600B65221 /* PurchaseSuccessViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 38DA2B762455A9D600B65221 /* PurchaseSuccessViewController.xib */; };
+		38DA2B7B245688C000B65221 /* BrandCollectionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 38DA2B79245688C000B65221 /* BrandCollectionViewController.swift */; };
+		38DA2B7C245688C000B65221 /* BrandCollectionViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 38DA2B7A245688C000B65221 /* BrandCollectionViewController.xib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -95,6 +99,10 @@
 		38DA2B6E2455581100B65221 /* CheckoutItemTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CheckoutItemTableViewCell.xib; sourceTree = "<group>"; };
 		38DA2B71245566BC00B65221 /* PricingInfoTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PricingInfoTableViewCell.swift; sourceTree = "<group>"; };
 		38DA2B72245566BC00B65221 /* PricingInfoTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = PricingInfoTableViewCell.xib; sourceTree = "<group>"; };
+		38DA2B752455A9D600B65221 /* PurchaseSuccessViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PurchaseSuccessViewController.swift; sourceTree = "<group>"; };
+		38DA2B762455A9D600B65221 /* PurchaseSuccessViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = PurchaseSuccessViewController.xib; sourceTree = "<group>"; };
+		38DA2B79245688C000B65221 /* BrandCollectionViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BrandCollectionViewController.swift; sourceTree = "<group>"; };
+		38DA2B7A245688C000B65221 /* BrandCollectionViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = BrandCollectionViewController.xib; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -170,6 +178,10 @@
 				38DA2B6E2455581100B65221 /* CheckoutItemTableViewCell.xib */,
 				38DA2B71245566BC00B65221 /* PricingInfoTableViewCell.swift */,
 				38DA2B72245566BC00B65221 /* PricingInfoTableViewCell.xib */,
+				38DA2B752455A9D600B65221 /* PurchaseSuccessViewController.swift */,
+				38DA2B762455A9D600B65221 /* PurchaseSuccessViewController.xib */,
+				38DA2B79245688C000B65221 /* BrandCollectionViewController.swift */,
+				38DA2B7A245688C000B65221 /* BrandCollectionViewController.xib */,
 			);
 			path = makeupStore;
 			sourceTree = "<group>";
@@ -242,12 +254,14 @@
 				381CDB3F2452DDD3009673BF /* makeup.json in Resources */,
 				38DA2B702455581100B65221 /* CheckoutItemTableViewCell.xib in Resources */,
 				381CDB4B2452F3D3009673BF /* NewArrivalCollectionViewCell.xib in Resources */,
+				38DA2B7C245688C000B65221 /* BrandCollectionViewController.xib in Resources */,
 				381CDB372451D1EC009673BF /* DiscoverTableViewCell.xib in Resources */,
 				381CDB3B2451D2D2009673BF /* DiscoverCollectionViewCell.xib in Resources */,
 				386C477424533F4F00428780 /* BestSellersTableViewCell.xib in Resources */,
 				38DA2B68245554E800B65221 /* ItemSuggestionTableViewCell.xib in Resources */,
 				381CDB052451B1B6009673BF /* LaunchScreen.storyboard in Resources */,
 				386C47842454774A00428780 /* DetailInfoTableViewCell.xib in Resources */,
+				38DA2B782455A9D600B65221 /* PurchaseSuccessViewController.xib in Resources */,
 				381CDB132451CA54009673BF /* BannerTableViewCell.xib in Resources */,
 				386C477C2454575B00428780 /* DetailViewController.xib in Resources */,
 				38DA2B74245566BC00B65221 /* PricingInfoTableViewCell.xib in Resources */,
@@ -279,10 +293,12 @@
 				386C47772453430300428780 /* BestSellersCollectionViewCell.swift in Sources */,
 				381CDB3A2451D2D2009673BF /* DiscoverCollectionViewCell.swift in Sources */,
 				381CDB0F2451B3EB009673BF /* Makeup.swift in Sources */,
+				38DA2B7B245688C000B65221 /* BrandCollectionViewController.swift in Sources */,
 				38DA2B67245554E800B65221 /* ItemSuggestionTableViewCell.swift in Sources */,
 				381CDB122451CA54009673BF /* BannerTableViewCell.swift in Sources */,
 				386C478B2454979100428780 /* CheckoutViewController.swift in Sources */,
 				386C477F2454759E00428780 /* DetailImageTableViewCell.swift in Sources */,
+				38DA2B772455A9D600B65221 /* PurchaseSuccessViewController.swift in Sources */,
 				381CDAF92451B1B5009673BF /* AppDelegate.swift in Sources */,
 				381CDB362451D1EC009673BF /* DiscoverTableViewCell.swift in Sources */,
 				386C47832454774A00428780 /* DetailInfoTableViewCell.swift in Sources */,

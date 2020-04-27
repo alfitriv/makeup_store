@@ -28,6 +28,15 @@ class ViewController: UIViewController {
             self.navigationController?.pushViewController(detailVC, animated: true)
         }
     }
+    
+    var filteredBrand: [Makeup]? {
+        didSet {
+            let brandCollectionsVC = BrandCollectionViewController.init(nibName: "BrandCollectionViewController", bundle: nil)
+            brandCollectionsVC.makeupList = filteredBrand
+            self.navigationController?.pushViewController(brandCollectionsVC, animated: true)
+            
+        }
+    }
     @IBOutlet weak var tableView: UITableView!
     @IBOutlet weak var progressIndicator: UIActivityIndicatorView!
     
@@ -102,6 +111,7 @@ extension ViewController: UITableViewDelegate, UITableViewDataSource {
         case .discover:
             let cell = tableView.dequeueReusableCell(withIdentifier: "Discover", for: indexPath) as! DiscoverTableViewCell
             cell.brands = brands
+            cell.delegate = self 
             return cell
         case .newArrivals:
             let cell = tableView.dequeueReusableCell(withIdentifier: "NewArrivals", for: indexPath) as! NewArrivalsTableViewCell
@@ -164,6 +174,14 @@ extension ViewController: BestSellersTableViewCellDelegate {
     
 }
 
+extension ViewController: DiscoverTableViewCellDelegate {
+    func discoverTableViewCell(_ cell: DiscoverTableViewCell, didTap brand: String) {
+        let filteredMakeup = makeupList.filter { $0.brand == brand }
+        filteredBrand = filteredMakeup
+        
+    }
+}
+
 extension Array where Element: Hashable {
     func removingDuplicates() -> [Element] {
         var addedDict = [Element: Bool]()
@@ -177,3 +195,4 @@ extension Array where Element: Hashable {
         self = self.removingDuplicates()
     }
 }
+

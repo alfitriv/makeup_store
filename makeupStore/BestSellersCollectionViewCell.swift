@@ -16,7 +16,10 @@ class BestSellersCollectionViewCell: UICollectionViewCell {
     
     override func awakeFromNib() {
         super.awakeFromNib()
-        // Initialization code
+        self.layer.borderWidth = 4
+        self.layer.shadowOffset = CGSize(width: -1, height: 1)
+        self.layer.borderColor = CGColor(srgbRed: 254/255, green: 184/255, blue: 198/255, alpha: 1)
+        self.layer.cornerRadius = 12
     }
     
     func setupCell(makeup: Makeup) {

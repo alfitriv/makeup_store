@@ -19,6 +19,8 @@ class CheckoutViewController: UIViewController {
     var makeupList: [Makeup]?
     var sections: [CheckoutSections] = []
     @IBOutlet weak var tableView: UITableView!
+    @IBOutlet weak var checkoutButton: UIView!
+    @IBOutlet weak var activityIndicator: UIActivityIndicatorView!
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -35,7 +37,31 @@ class CheckoutViewController: UIViewController {
         tableView.tableFooterView = UIView(frame: .zero)
         
         tableView.estimatedRowHeight = 300
+        
+        self.navigationItem.title = "Checkout"
+        
+        checkoutButton.layer.cornerRadius = 8
+        
+        let tap = UITapGestureRecognizer(target: self, action: #selector(submitOrder))
+        checkoutButton.addGestureRecognizer(tap)
+        
+        activityIndicator.isHidden = true
+        activityIndicator.stopAnimating()
 
+    }
+    
+    @objc func submitOrder() {
+        activityIndicator.isHidden = false
+        activityIndicator.startAnimating()
+        
+    DispatchQueue.main.asyncAfter(deadline: .now() + 3.0) {
+        self.activityIndicator.isHidden = true
+        self.activityIndicator.stopAnimating()
+            let successVC = PurchaseSuccessViewController.init(nibName: "PurchaseSuccessViewController", bundle: nil)
+            successVC.modalPresentationStyle = .currentContext
+        successVC.delegate = self
+            self.present(successVC, animated: true, completion: nil)
+        }
     }
 
 }
@@ -75,6 +101,8 @@ extension CheckoutViewController: UITableViewDataSource, UITableViewDelegate {
             return cell
         case .pricingInfo:
             let cell = tableView.dequeueReusableCell(withIdentifier: "PricingInfo", for: indexPath) as! PricingInfoTableViewCell
+            
+            cell.setupCell(makeup: checkoutItems)
             return cell
         }
     }
@@ -85,8 +113,10 @@ extension CheckoutViewController: UITableViewDataSource, UITableViewDelegate {
         switch section {
         case .orderItems:
             return UITableView.automaticDimension + CGFloat(checkoutItems.count * 100)
-        default:
-            return 250
+        case .pricingInfo:
+            return UITableView.automaticDimension
+        case .itemSuggestion:
+            return 200
         }
     }
     
@@ -125,4 +155,11 @@ extension CheckoutViewController: ItemSuggestionTableViewCellDelegate {
     }
     
     
+}
+
+extension CheckoutViewController: PurchaseSuccessViewControllerDelegate {
+    func purchaseSuccessViewController(_ class: PurchaseSuccessViewController, didDismiss _: Bool) {
+        self.navigationController?.popToRootViewController(animated: true)
+    }
+
 }

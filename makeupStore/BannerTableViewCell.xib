@@ -9,22 +9,22 @@
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
         <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
-        <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" rowHeight="271" id="KGk-i7-Jjw" customClass="BannerTableViewCell" customModule="makeupStore" customModuleProvider="target">
+        <tableViewCell contentMode="scaleToFill" selectionStyle="none" indentationWidth="10" rowHeight="271" id="KGk-i7-Jjw" customClass="BannerTableViewCell" customModule="makeupStore" customModuleProvider="target">
             <rect key="frame" x="0.0" y="0.0" width="320" height="271"/>
             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
             <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="KGk-i7-Jjw" id="H2p-sc-9uM">
                 <rect key="frame" x="0.0" y="0.0" width="320" height="271"/>
                 <autoresizingMask key="autoresizingMask"/>
                 <subviews>
-                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="makeup_banner" translatesAutoresizingMaskIntoConstraints="NO" id="ldU-oa-Qin">
+                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" alpha="0.55000000000000004" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="makeup_banner" translatesAutoresizingMaskIntoConstraints="NO" id="ldU-oa-Qin">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="271"/>
                     </imageView>
-                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Unleash Your Beauty" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="8jO-uS-YaC">
-                        <rect key="frame" x="32" y="32" width="208" height="181.5"/>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Unleash Your Beauty Needs" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="8jO-uS-YaC">
+                        <rect key="frame" x="32" y="32" width="208" height="241.5"/>
                         <fontDescription key="fontDescription" name="Helvetica-Bold" family="Helvetica" pointSize="52"/>
-                        <color key="textColor" red="0.57522873161388199" green="0.7693973183631897" blue="0.73211802160337436" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                        <color key="textColor" red="0.39266719529999999" green="0.62442983740000002" blue="0.59497622309999998" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                         <nil key="highlightedColor"/>
-                        <color key="shadowColor" cocoaTouchSystemColor="darkTextColor"/>
+                        <color key="shadowColor" systemColor="systemYellowColor" red="1" green="0.80000000000000004" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <size key="shadowOffset" width="0.0" height="-2"/>
                     </label>
                 </subviews>
@@ -39,6 +39,9 @@
                 </constraints>
             </tableViewCellContentView>
             <viewLayoutGuide key="safeArea" id="njF-e1-oar"/>
+            <connections>
+                <outlet property="bannerImage" destination="ldU-oa-Qin" id="Nv1-if-G2M"/>
+            </connections>
             <point key="canvasLocation" x="137.68115942028987" y="228.68303571428569"/>
         </tableViewCell>
     </objects>

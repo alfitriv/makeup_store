@@ -8,9 +8,15 @@
 
 import UIKit
 
+protocol DiscoverTableViewCellDelegate: class {
+    func discoverTableViewCell(_ cell: DiscoverTableViewCell, didTap brand: String)
+}
+
 class DiscoverTableViewCell: UITableViewCell {
 
     @IBOutlet weak var collectionView: UICollectionView!
+    weak var delegate: DiscoverTableViewCellDelegate?
+    
     var brands: [String]? {
         didSet {
             collectionView.reloadData()
@@ -46,5 +52,9 @@ extension DiscoverTableViewCell: UICollectionViewDataSource, UICollectionViewDel
         return CGSize(width: 110, height: 90)
     }
     
-    
+    func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
+        if let brand = brands?[indexPath.row] {
+            delegate?.discoverTableViewCell(self, didTap: brand)
+        }
+    }
 }
