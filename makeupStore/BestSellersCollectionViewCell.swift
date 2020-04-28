@@ -25,7 +25,7 @@ class BestSellersCollectionViewCell: UICollectionViewCell {
     func setupCell(makeup: Makeup) {
         let url = URL(string: makeup.imageLink ?? "")
         productImageView.kf.setImage(with: url)
-        productCategory.text  = makeup.productType?.rawValue
+        productCategory.text  = makeup.name
         productBrand.text = makeup.brand
     }
 

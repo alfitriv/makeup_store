@@ -21,12 +21,7 @@ class ItemSuggestionTableViewCell: UITableViewCell {
     override func awakeFromNib() {
         super.awakeFromNib()
         collectionView.register(UINib(nibName: "BestSellersCollectionViewCell", bundle: nil), forCellWithReuseIdentifier: "BestSeller")
-    }
-
-    override func setSelected(_ selected: Bool, animated: Bool) {
-        super.setSelected(selected, animated: animated)
-
-        // Configure the view for the selected state
+        
     }
     
 }

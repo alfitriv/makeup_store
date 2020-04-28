@@ -35,6 +35,8 @@ class DetailViewController: UIViewController {
         
         tableView.estimatedRowHeight = 300
         
+        tableView.separatorStyle = .none
+        
         self.navigationItem.title = "Overview"
         
         addToCartView.layer.cornerRadius = 8

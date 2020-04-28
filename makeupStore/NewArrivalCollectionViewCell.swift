@@ -26,8 +26,8 @@ class NewArrivalCollectionViewCell: UICollectionViewCell {
         let url = URL(string: makeup.imageLink ?? "")
         productImageView.kf.setImage(with: url)
         
-        brandName.text = makeup.name
-        productTypeLabel.text = makeup.brand
+        brandName.text = makeup.brand
+        productTypeLabel.text = makeup.productType?.rawValue
     }
 
 }

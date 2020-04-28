@@ -116,6 +116,7 @@ extension ViewController: UITableViewDelegate, UITableViewDataSource {
         case .newArrivals:
             let cell = tableView.dequeueReusableCell(withIdentifier: "NewArrivals", for: indexPath) as! NewArrivalsTableViewCell
             cell.makeupList = makeupList
+            cell.delegate = self
             return cell
         case .bestSellers:
             let cell = tableView.dequeueReusableCell(withIdentifier: "BestSellers", for: indexPath) as! BestSellersTableViewCell
@@ -135,7 +136,7 @@ extension ViewController: UITableViewDelegate, UITableViewDataSource {
         case .newArrivals:
             return 400
         case .bestSellers:
-            return 200
+            return 220
         default:
             return 150
         }
@@ -180,6 +181,14 @@ extension ViewController: DiscoverTableViewCellDelegate {
         filteredBrand = filteredMakeup
         
     }
+}
+
+extension ViewController: NewArrivalsTableViewCellDelegate {
+    func newArrivalsTableViewCell(_ cell: NewArrivalsTableViewCell, didTap item: Makeup) {
+        chosenMakeup = item
+    }
+    
+    
 }
 
 extension Array where Element: Hashable {

@@ -16,7 +16,7 @@
                 <rect key="frame" x="0.0" y="0.0" width="320" height="121"/>
                 <autoresizingMask key="autoresizingMask"/>
                 <subviews>
-                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="bottomLeft" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="undraw_Appreciation_sjc1" translatesAutoresizingMaskIntoConstraints="NO" id="5FG-EO-3MY">
+                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="TopLeft" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="pink-watercolor-brush-stroke-2-10" translatesAutoresizingMaskIntoConstraints="NO" id="5FG-EO-3MY">
                         <rect key="frame" x="60" y="-67" width="260" height="180"/>
                         <constraints>
                             <constraint firstAttribute="height" constant="180" id="N9V-NS-9ch"/>
@@ -55,6 +55,6 @@
         </tableViewCell>
     </objects>
     <resources>
-        <image name="undraw_Appreciation_sjc1" width="391" height="299"/>
+        <image name="pink-watercolor-brush-stroke-2-10" width="373.5" height="181.5"/>
     </resources>
 </document>

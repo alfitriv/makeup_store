@@ -8,8 +8,13 @@
 
 import UIKit
 
+protocol NewArrivalsTableViewCellDelegate: class {
+    func newArrivalsTableViewCell(_ cell: NewArrivalsTableViewCell, didTap item: Makeup)
+}
+
 class NewArrivalsTableViewCell: UITableViewCell {
     @IBOutlet weak var collectionView: UICollectionView!
+    weak var delegate : NewArrivalsTableViewCellDelegate?
     var makeupList: [Makeup]? {
         didSet {
             collectionView.reloadData()
@@ -46,5 +51,12 @@ extension NewArrivalsTableViewCell: UICollectionViewDelegateFlowLayout, UICollec
         CGSize(width: 150, height: 350)
     }
     
-}
+    func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
+        guard let makeup = makeupList?[indexPath.item] else {
+            return
+        }
+        delegate?.newArrivalsTableViewCell(self, didTap: makeup)
 
+    }
+    
+}
