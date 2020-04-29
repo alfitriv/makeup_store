@@ -8,4 +8,4 @@ Makeup store iOS app developed in Swift. Data fetched from https://makeup-api.he
 If for some reason Kingfisher is uninstalled in the project please install either using Cocoapods or Swift package manager. 
 
 # Demo
-![Makeup App Demo](project_makeup_final.mov)
+![Makeup App Demo](https://media.giphy.com/media/TIGNgjTmKtZopPhkoO/giphy.gif)
