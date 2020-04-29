@@ -53,6 +53,7 @@
 		38DA2B782455A9D600B65221 /* PurchaseSuccessViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 38DA2B762455A9D600B65221 /* PurchaseSuccessViewController.xib */; };
 		38DA2B7B245688C000B65221 /* BrandCollectionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 38DA2B79245688C000B65221 /* BrandCollectionViewController.swift */; };
 		38DA2B7C245688C000B65221 /* BrandCollectionViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 38DA2B7A245688C000B65221 /* BrandCollectionViewController.xib */; };
+		38DA2B85245928DB00B65221 /* project_makeup_final.mov in Resources */ = {isa = PBXBuildFile; fileRef = 38DA2B84245928DA00B65221 /* project_makeup_final.mov */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -103,6 +104,7 @@
 		38DA2B762455A9D600B65221 /* PurchaseSuccessViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = PurchaseSuccessViewController.xib; sourceTree = "<group>"; };
 		38DA2B79245688C000B65221 /* BrandCollectionViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BrandCollectionViewController.swift; sourceTree = "<group>"; };
 		38DA2B7A245688C000B65221 /* BrandCollectionViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = BrandCollectionViewController.xib; sourceTree = "<group>"; };
+		38DA2B84245928DA00B65221 /* project_makeup_final.mov */ = {isa = PBXFileReference; lastKnownFileType = video.quicktime; path = project_makeup_final.mov; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -142,6 +144,7 @@
 				381CDAF82451B1B5009673BF /* AppDelegate.swift */,
 				381CDAFA2451B1B5009673BF /* SceneDelegate.swift */,
 				381CDB012451B1B6009673BF /* Assets.xcassets */,
+				38DA2B84245928DA00B65221 /* project_makeup_final.mov */,
 				381CDB032451B1B6009673BF /* LaunchScreen.storyboard */,
 				381CDB062451B1B6009673BF /* Info.plist */,
 				381CDB3E2452DDD3009673BF /* makeup.json */,
@@ -292,6 +295,7 @@
 				381CDB022451B1B6009673BF /* Assets.xcassets in Resources */,
 				386C47802454759E00428780 /* DetailImageTableViewCell.xib in Resources */,
 				386C47882454842800428780 /* DescriptionTableViewCell.xib in Resources */,
+				38DA2B85245928DB00B65221 /* project_makeup_final.mov in Resources */,
 				38DA2B642454A4C500B65221 /* OrderItemsTableViewCell.xib in Resources */,
 				386C47782453430300428780 /* BestSellersCollectionViewCell.xib in Resources */,
 				381CDB472452EF67009673BF /* NewArrivalsTableViewCell.xib in Resources */,
