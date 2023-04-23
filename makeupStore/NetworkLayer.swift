@@ -48,8 +48,6 @@ class NetworkLayer {
                 return
             }
             
-            print(data)
-            
             do {
                 let makeupList = try JSONDecoder().decode([Makeup].self, from: data)
                 print(makeupList)
@@ -61,7 +59,6 @@ class NetworkLayer {
             }
             
         }.resume()
-        
     }
     
     func fetchMakeupListJSON(successHandler: @escaping ([Makeup]) -> Void, errorHandler: @escaping (Error) -> Void) {
@@ -69,7 +66,6 @@ class NetworkLayer {
         let data = try! Data(contentsOf: URL(fileURLWithPath: path))
         do {
             let makeupList = try JSONDecoder().decode([Makeup].self, from: data)
-            print(makeupList)
             DispatchQueue.main.async {
                 successHandler(makeupList)
             }
@@ -77,6 +73,5 @@ class NetworkLayer {
             
         }
     }
-    
 }
 
