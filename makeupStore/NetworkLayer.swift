@@ -21,11 +21,15 @@ enum ProductType: String, Codable {
     case nailPolish = "nail_polish"
 }
 
+enum NetworkError: Error {
+    case badURL
+}
+
 class NetworkLayer {
     static var shared = NetworkLayer()
     private init(){}
     
-    func fetchMakeUpList(successHandler: @escaping ([Makeup]) -> Void, errorHandler: @escaping (Error) -> Void) {
+    func fetchMakeUpList(completionHandler: @escaping (Result<[Makeup], NetworkError>) -> Void) {
         let session = URLSession.shared
         let urlRequest = URLRequest(url: URL(string: "https://makeup-api.herokuapp.com/api/v1/products.json")!)
         session.dataTask(with: urlRequest) { (data, response, error) in
@@ -39,7 +43,7 @@ class NetworkLayer {
             
             guard let data = data else {
                 DispatchQueue.main.async {
-                    errorHandler(NSError(domain: "", code: 0, userInfo: nil))
+                    completionHandler(.failure(.badURL))
                 }
                 return
             }
@@ -50,7 +54,7 @@ class NetworkLayer {
                 let makeupList = try JSONDecoder().decode([Makeup].self, from: data)
                 print(makeupList)
                 DispatchQueue.main.async {
-                    successHandler(makeupList)
+                    completionHandler(.success(makeupList))
                 }
             } catch {
                 

@@ -45,15 +45,18 @@ class ViewController: UIViewController {
         
         progressIndicator.isHidden = false
         progressIndicator.startAnimating()
-        networkLayer.fetchMakeupListJSON(successHandler: { [weak self] (makeup) in
-            self?.makeupList = makeup
-            let filteredBrands = self?.makeupList.compactMap { $0.brand }
-            self?.brands = filteredBrands?.removingDuplicates()
-            self?.progressIndicator.isHidden = true
-            self?.progressIndicator.stopAnimating()
-            self?.tableView.reloadData()
-        }) { (error) in
-            print(error)
+        networkLayer.fetchMakeUpList { result in
+            switch result {
+            case .success(let makeup):
+                self.makeupList = makeup
+                let filteredBrands = self.makeupList.compactMap { $0.brand }
+                self.brands = filteredBrands.removingDuplicates()
+                self.progressIndicator.isHidden = true
+                self.progressIndicator.stopAnimating()
+                self.tableView.reloadData()
+            case .failure(let error):
+                print(error)
+            }
         }
         
         sections = [
