@@ -25,7 +25,11 @@ enum NetworkError: Error {
     case badURL
 }
 
-class NetworkLayer {
+protocol MakeupService {
+    func fetchMakeUpList(completionHandler: @escaping (Result<[Makeup], NetworkError>) -> Void)
+}
+
+class NetworkLayer: MakeupService {
     static var shared = NetworkLayer()
     private init(){}
     
@@ -50,7 +54,6 @@ class NetworkLayer {
             
             do {
                 let makeupList = try JSONDecoder().decode([Makeup].self, from: data)
-                print(makeupList)
                 DispatchQueue.main.async {
                     completionHandler(.success(makeupList))
                 }

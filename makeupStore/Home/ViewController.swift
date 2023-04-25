@@ -16,7 +16,8 @@ enum HomeSections {
 }
 
 class ViewController: UIViewController {
-    var networkLayer = NetworkLayer.shared
+    private let networkLayer: MakeupService
+    let tableView: UITableView = UITableView(frame: CGRect(x: 0, y: 0, width: UIScreen.main.bounds.width, height: UIScreen.main.bounds.height))
     var makeupList: [Makeup] = []
     var sections: [HomeSections] = []
     var brands: [String]?
@@ -37,28 +38,33 @@ class ViewController: UIViewController {
             tableView.reloadData()
         }
     }
-    @IBOutlet weak var tableView: UITableView!
-    @IBOutlet weak var progressIndicator: UIActivityIndicatorView!
+    
+    let activityView: UIActivityIndicatorView = UIActivityIndicatorView(style: UIActivityIndicatorView.Style.large)
+    
+    init(networkLayer: MakeupService) {
+        self.networkLayer = networkLayer
+        super.init(nibName: nil, bundle: nil)
+    }
+    
+    required init?(coder: NSCoder) {
+        fatalError("init(coder:) has not been implemented")
+    }
     
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        progressIndicator.isHidden = false
-        progressIndicator.startAnimating()
-        networkLayer.fetchMakeUpList { result in
-            switch result {
-            case .success(let makeup):
-                self.makeupList = makeup
-                let filteredBrands = self.makeupList.compactMap { $0.brand }
-                self.brands = filteredBrands.removingDuplicates()
-                self.progressIndicator.isHidden = true
-                self.progressIndicator.stopAnimating()
-                self.tableView.reloadData()
-            case .failure(let error):
-                print(error)
-            }
-        }
+        //MARK: Setting of table view
+        self.tableView.dataSource = self
+        self.tableView.delegate = self
+        tableView.tableFooterView = UIView(frame: .zero)
+        tableView.register(UINib(nibName: "BannerTableViewCell", bundle: nil), forCellReuseIdentifier: "Banner")
+        tableView.register(UINib(nibName: "DiscoverTableViewCell", bundle: nil), forCellReuseIdentifier: "Discover")
+        tableView.register(UINib(nibName: "NewArrivalsTableViewCell", bundle: nil), forCellReuseIdentifier: "NewArrivals")
+        tableView.register(UINib(nibName: "BestSellersTableViewCell", bundle: nil), forCellReuseIdentifier: "BestSellers")
+        self.tableView.separatorStyle = UITableViewCell.SeparatorStyle.none
+        self.view.addSubview(tableView)
         
+        //MARK: Setting of sections
         sections = [
             HomeSections.banner,
             HomeSections.discover,
@@ -66,20 +72,40 @@ class ViewController: UIViewController {
             HomeSections.bestSellers
         ]
         
-        tableView.tableFooterView = UIView(frame: .zero)
-        
-        tableView.register(UINib(nibName: "BannerTableViewCell", bundle: nil), forCellReuseIdentifier: "Banner")
-        tableView.register(UINib(nibName: "DiscoverTableViewCell", bundle: nil), forCellReuseIdentifier: "Discover")
-        tableView.register(UINib(nibName: "NewArrivalsTableViewCell", bundle: nil), forCellReuseIdentifier: "NewArrivals")
-        tableView.register(UINib(nibName: "BestSellersTableViewCell", bundle: nil), forCellReuseIdentifier: "BestSellers")
-        
-        self.tableView.separatorStyle = UITableViewCell.SeparatorStyle.none
-        
+        //MARK: Setting of navigation item
         self.navigationItem.title = "Home"
         navigationController?.navigationBar.prefersLargeTitles = true
         
+        //MARK: Fetching of data
+        showActivityIndicator()
+        networkLayer.fetchMakeUpList { result in
+            switch result {
+            case .success(let makeup):
+                self.makeupList = makeup
+                let filteredBrands = self.makeupList.compactMap { $0.brand }
+                self.brands = filteredBrands.removingDuplicates()
+                self.hideActivityIndicator()
+                self.tableView.reloadData()
+            case .failure(let error):
+                print(error)
+            }
+        }
+        
         tableView.reloadData()
         
+    }
+    
+    func showActivityIndicator() {
+        activityView.center = self.view.center
+        self.view.addSubview(activityView)
+        activityView.isHidden = false
+        activityView.color = .systemPink
+        activityView.startAnimating()
+    }
+    
+    func hideActivityIndicator() {
+        activityView.isHidden = true
+        activityView.stopAnimating()
     }
     
 }
