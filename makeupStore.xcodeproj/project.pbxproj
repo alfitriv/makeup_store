@@ -10,7 +10,6 @@
 		381CDAF92451B1B5009673BF /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 381CDAF82451B1B5009673BF /* AppDelegate.swift */; };
 		381CDAFB2451B1B5009673BF /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 381CDAFA2451B1B5009673BF /* SceneDelegate.swift */; };
 		381CDAFD2451B1B5009673BF /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 381CDAFC2451B1B5009673BF /* ViewController.swift */; };
-		381CDB002451B1B5009673BF /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 381CDAFE2451B1B5009673BF /* Main.storyboard */; };
 		381CDB022451B1B6009673BF /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 381CDB012451B1B6009673BF /* Assets.xcassets */; };
 		381CDB052451B1B6009673BF /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 381CDB032451B1B6009673BF /* LaunchScreen.storyboard */; };
 		381CDB0D2451B24D009673BF /* NetworkLayer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 381CDB0C2451B24D009673BF /* NetworkLayer.swift */; };
@@ -54,14 +53,26 @@
 		38DA2B7B245688C000B65221 /* BrandCollectionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 38DA2B79245688C000B65221 /* BrandCollectionViewController.swift */; };
 		38DA2B7C245688C000B65221 /* BrandCollectionViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 38DA2B7A245688C000B65221 /* BrandCollectionViewController.xib */; };
 		38DA2B85245928DB00B65221 /* project_makeup_final.mov in Resources */ = {isa = PBXBuildFile; fileRef = 38DA2B84245928DA00B65221 /* project_makeup_final.mov */; };
+		E52C3D6029F8522900862A8F /* makeupStoreTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = E52C3D5F29F8522900862A8F /* makeupStoreTests.swift */; };
+		E52C3D6729F8549600862A8F /* ViewControllerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = E52C3D6629F8549600862A8F /* ViewControllerTests.swift */; };
+		E52C3D6929F854EB00862A8F /* MockMakeupService.swift in Sources */ = {isa = PBXBuildFile; fileRef = E52C3D6829F854EB00862A8F /* MockMakeupService.swift */; };
 /* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		E52C3D6129F8522900862A8F /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 381CDAED2451B1B5009673BF /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 381CDAF42451B1B5009673BF;
+			remoteInfo = makeupStore;
+		};
+/* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
 		381CDAF52451B1B5009673BF /* makeupStore.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = makeupStore.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		381CDAF82451B1B5009673BF /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		381CDAFA2451B1B5009673BF /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
 		381CDAFC2451B1B5009673BF /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
-		381CDAFF2451B1B5009673BF /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		381CDB012451B1B6009673BF /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		381CDB042451B1B6009673BF /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		381CDB062451B1B6009673BF /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -105,6 +116,10 @@
 		38DA2B79245688C000B65221 /* BrandCollectionViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BrandCollectionViewController.swift; sourceTree = "<group>"; };
 		38DA2B7A245688C000B65221 /* BrandCollectionViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = BrandCollectionViewController.xib; sourceTree = "<group>"; };
 		38DA2B84245928DA00B65221 /* project_makeup_final.mov */ = {isa = PBXFileReference; lastKnownFileType = video.quicktime; path = project_makeup_final.mov; sourceTree = "<group>"; };
+		E52C3D5D29F8522900862A8F /* makeupStoreTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = makeupStoreTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		E52C3D5F29F8522900862A8F /* makeupStoreTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = makeupStoreTests.swift; sourceTree = "<group>"; };
+		E52C3D6629F8549600862A8F /* ViewControllerTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewControllerTests.swift; sourceTree = "<group>"; };
+		E52C3D6829F854EB00862A8F /* MockMakeupService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MockMakeupService.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -116,6 +131,13 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		E52C3D5A29F8522900862A8F /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
@@ -123,6 +145,7 @@
 			isa = PBXGroup;
 			children = (
 				381CDAF72451B1B5009673BF /* makeupStore */,
+				E52C3D5E29F8522900862A8F /* makeupStoreTests */,
 				381CDAF62451B1B5009673BF /* Products */,
 			);
 			sourceTree = "<group>";
@@ -131,6 +154,7 @@
 			isa = PBXGroup;
 			children = (
 				381CDAF52451B1B5009673BF /* makeupStore.app */,
+				E52C3D5D29F8522900862A8F /* makeupStoreTests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -160,7 +184,6 @@
 				381CDAFC2451B1B5009673BF /* ViewController.swift */,
 				381CDB102451CA54009673BF /* BannerTableViewCell.swift */,
 				381CDB112451CA54009673BF /* BannerTableViewCell.xib */,
-				381CDAFE2451B1B5009673BF /* Main.storyboard */,
 				381CDB342451D1EC009673BF /* DiscoverTableViewCell.swift */,
 				381CDB352451D1EC009673BF /* DiscoverTableViewCell.xib */,
 				381CDB382451D2D2009673BF /* DiscoverCollectionViewCell.swift */,
@@ -213,6 +236,16 @@
 			path = Checkout;
 			sourceTree = "<group>";
 		};
+		E52C3D5E29F8522900862A8F /* makeupStoreTests */ = {
+			isa = PBXGroup;
+			children = (
+				E52C3D5F29F8522900862A8F /* makeupStoreTests.swift */,
+				E52C3D6629F8549600862A8F /* ViewControllerTests.swift */,
+				E52C3D6829F854EB00862A8F /* MockMakeupService.swift */,
+			);
+			path = makeupStoreTests;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -236,18 +269,40 @@
 			productReference = 381CDAF52451B1B5009673BF /* makeupStore.app */;
 			productType = "com.apple.product-type.application";
 		};
+		E52C3D5C29F8522900862A8F /* makeupStoreTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = E52C3D6329F8522900862A8F /* Build configuration list for PBXNativeTarget "makeupStoreTests" */;
+			buildPhases = (
+				E52C3D5929F8522900862A8F /* Sources */,
+				E52C3D5A29F8522900862A8F /* Frameworks */,
+				E52C3D5B29F8522900862A8F /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				E52C3D6229F8522900862A8F /* PBXTargetDependency */,
+			);
+			name = makeupStoreTests;
+			productName = makeupStoreTests;
+			productReference = E52C3D5D29F8522900862A8F /* makeupStoreTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
 		381CDAED2451B1B5009673BF /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
-				LastSwiftUpdateCheck = 1130;
+				LastSwiftUpdateCheck = 1430;
 				LastUpgradeCheck = 1130;
 				ORGANIZATIONNAME = "Vania Radmila Alfitri";
 				TargetAttributes = {
 					381CDAF42451B1B5009673BF = {
 						CreatedOnToolsVersion = 11.3.1;
+					};
+					E52C3D5C29F8522900862A8F = {
+						CreatedOnToolsVersion = 14.3;
+						TestTargetID = 381CDAF42451B1B5009673BF;
 					};
 				};
 			};
@@ -268,6 +323,7 @@
 			projectRoot = "";
 			targets = (
 				381CDAF42451B1B5009673BF /* makeupStore */,
+				E52C3D5C29F8522900862A8F /* makeupStoreTests */,
 			);
 		};
 /* End PBXProject section */
@@ -299,7 +355,13 @@
 				38DA2B642454A4C500B65221 /* OrderItemsTableViewCell.xib in Resources */,
 				386C47782453430300428780 /* BestSellersCollectionViewCell.xib in Resources */,
 				381CDB472452EF67009673BF /* NewArrivalsTableViewCell.xib in Resources */,
-				381CDB002451B1B5009673BF /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		E52C3D5B29F8522900862A8F /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -336,17 +398,27 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		E52C3D5929F8522900862A8F /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				E52C3D6729F8549600862A8F /* ViewControllerTests.swift in Sources */,
+				E52C3D6029F8522900862A8F /* makeupStoreTests.swift in Sources */,
+				E52C3D6929F854EB00862A8F /* MockMakeupService.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXSourcesBuildPhase section */
 
-/* Begin PBXVariantGroup section */
-		381CDAFE2451B1B5009673BF /* Main.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				381CDAFF2451B1B5009673BF /* Base */,
-			);
-			name = Main.storyboard;
-			sourceTree = "<group>";
+/* Begin PBXTargetDependency section */
+		E52C3D6229F8522900862A8F /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 381CDAF42451B1B5009673BF /* makeupStore */;
+			targetProxy = E52C3D6129F8522900862A8F /* PBXContainerItemProxy */;
 		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
 		381CDB032451B1B6009673BF /* LaunchScreen.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
@@ -508,6 +580,48 @@
 			};
 			name = Release;
 		};
+		E52C3D6429F8522900862A8F /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = D6ZFFGJQCK;
+				GENERATE_INFOPLIST_FILE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 16.4;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = makeupStoreTests.makeupStoreTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/makeupStore.app/$(BUNDLE_EXECUTABLE_FOLDER_PATH)/makeupStore";
+			};
+			name = Debug;
+		};
+		E52C3D6529F8522900862A8F /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = D6ZFFGJQCK;
+				GENERATE_INFOPLIST_FILE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 16.4;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = makeupStoreTests.makeupStoreTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/makeupStore.app/$(BUNDLE_EXECUTABLE_FOLDER_PATH)/makeupStore";
+			};
+			name = Release;
+		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
@@ -525,6 +639,15 @@
 			buildConfigurations = (
 				381CDB0A2451B1B6009673BF /* Debug */,
 				381CDB0B2451B1B6009673BF /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		E52C3D6329F8522900862A8F /* Build configuration list for PBXNativeTarget "makeupStoreTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				E52C3D6429F8522900862A8F /* Debug */,
+				E52C3D6529F8522900862A8F /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
