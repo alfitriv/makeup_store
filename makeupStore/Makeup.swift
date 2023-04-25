@@ -8,6 +8,19 @@
 
 import Foundation
 
+enum ProductType: String, Codable {
+    case lipstick = "lipstick"
+    case lipLiner = "lip_liner"
+    case foundation = "foundation"
+    case eyeLiner = "eyeliner"
+    case eyeShadow = "eyeshadow"
+    case blush = "blush"
+    case bronzer = "bronzer"
+    case mascara = "mascara"
+    case eyeBrow = "eyebrow"
+    case nailPolish = "nail_polish"
+}
+
 struct Makeup: Codable, Equatable {
     var id: Int
     var brand: String?
