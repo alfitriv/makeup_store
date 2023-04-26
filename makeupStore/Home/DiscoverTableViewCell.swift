@@ -43,8 +43,9 @@ extension DiscoverTableViewCell: UICollectionViewDataSource, UICollectionViewDel
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "DiscoverItem", for: indexPath) as! DiscoverCollectionViewCell
-        let brand = brands?[indexPath.row]
-        cell.setupLabel(brand: brand ?? "")
+        let brand = brands?[indexPath.row] ?? ""
+        let viewModel = DiscoverViewModel(brand: brand)
+        cell.configure(viewModel: viewModel)
         return cell 
     }
     

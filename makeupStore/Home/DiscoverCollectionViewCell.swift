@@ -17,6 +17,10 @@ class DiscoverCollectionViewCell: UICollectionViewCell {
         self.layer.cornerRadius = 8
     }
     
+    func configure(viewModel: DiscoverViewModel) {
+        textLabel.text = viewModel.textLabel
+    }
+    
     func setupLabel(brand: String) {
         textLabel.text = brand
     }

@@ -56,6 +56,7 @@
 		E52C3D6029F8522900862A8F /* makeupStoreTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = E52C3D5F29F8522900862A8F /* makeupStoreTests.swift */; };
 		E52C3D6729F8549600862A8F /* ViewControllerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = E52C3D6629F8549600862A8F /* ViewControllerTests.swift */; };
 		E52C3D6929F854EB00862A8F /* MockMakeupService.swift in Sources */ = {isa = PBXBuildFile; fileRef = E52C3D6829F854EB00862A8F /* MockMakeupService.swift */; };
+		E52C3D6D29F94AEB00862A8F /* DiscoverViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = E52C3D6C29F94AEB00862A8F /* DiscoverViewModel.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -120,6 +121,7 @@
 		E52C3D5F29F8522900862A8F /* makeupStoreTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = makeupStoreTests.swift; sourceTree = "<group>"; };
 		E52C3D6629F8549600862A8F /* ViewControllerTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewControllerTests.swift; sourceTree = "<group>"; };
 		E52C3D6829F854EB00862A8F /* MockMakeupService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MockMakeupService.swift; sourceTree = "<group>"; };
+		E52C3D6C29F94AEB00862A8F /* DiscoverViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DiscoverViewModel.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -174,6 +176,7 @@
 				381CDB3E2452DDD3009673BF /* makeup.json */,
 				381CDB0C2451B24D009673BF /* NetworkLayer.swift */,
 				381CDB0E2451B3EB009673BF /* Makeup.swift */,
+				E52C3D6C29F94AEB00862A8F /* DiscoverViewModel.swift */,
 			);
 			path = makeupStore;
 			sourceTree = "<group>";
@@ -393,6 +396,7 @@
 				381CDB362451D1EC009673BF /* DiscoverTableViewCell.swift in Sources */,
 				386C47832454774A00428780 /* DetailInfoTableViewCell.swift in Sources */,
 				38DA2B6F2455581100B65221 /* CheckoutItemTableViewCell.swift in Sources */,
+				E52C3D6D29F94AEB00862A8F /* DiscoverViewModel.swift in Sources */,
 				38DA2B73245566BC00B65221 /* PricingInfoTableViewCell.swift in Sources */,
 				381CDAFB2451B1B5009673BF /* SceneDelegate.swift in Sources */,
 			);
