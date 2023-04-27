@@ -20,9 +20,5 @@ class DiscoverCollectionViewCell: UICollectionViewCell {
     func configure(viewModel: DiscoverViewModel) {
         textLabel.text = viewModel.textLabel
     }
-    
-    func setupLabel(brand: String) {
-        textLabel.text = brand
-    }
 
 }

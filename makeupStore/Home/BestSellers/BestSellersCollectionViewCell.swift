@@ -22,11 +22,10 @@ class BestSellersCollectionViewCell: UICollectionViewCell {
         self.layer.cornerRadius = 12
     }
     
-    func setupCell(makeup: Makeup) {
-        let url = URL(string: makeup.imageLink ?? "")
-        productImageView.kf.setImage(with: url)
-        productCategory.text  = makeup.name
-        productBrand.text = makeup.brand
+    func configure(viewModel: BestSellerViewModel) {
+        productImageView.kf.setImage(with: viewModel.imageUrl)
+        productCategory.text  = viewModel.makeupName
+        productBrand.text = viewModel.makeupBrand
     }
 
 }

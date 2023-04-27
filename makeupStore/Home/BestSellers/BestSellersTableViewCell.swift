@@ -44,7 +44,8 @@ extension BestSellersTableViewCell: UICollectionViewDataSource, UICollectionView
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "BestSeller", for: indexPath) as! BestSellersCollectionViewCell
         let bestSeller = bestSellers?[indexPath.item] ?? Makeup(id: 0, brand: "", productType: .blush, imageLink: "", name: "", price: "", priceSign: "")
-        cell.setupCell(makeup: bestSeller)
+        let viewModel = BestSellerViewModel(makeup: bestSeller)
+        cell.configure(viewModel: viewModel)
         return cell
     }
     

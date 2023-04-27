@@ -22,12 +22,11 @@ class NewArrivalCollectionViewCell: UICollectionViewCell {
         
     }
     
-    func setupCellItem(makeup: Makeup) {
-        let url = URL(string: makeup.imageLink ?? "")
-        productImageView.kf.setImage(with: url)
+    func configure(viewModel: NewArrivalsViewModel) {
+        productImageView.kf.setImage(with: viewModel.imageUrl)
         
-        brandName.text = makeup.brand
-        productTypeLabel.text = makeup.productType?.rawValue
+        brandName.text = viewModel.brandName
+        productTypeLabel.text = viewModel.productTypeLabel
     }
 
 }

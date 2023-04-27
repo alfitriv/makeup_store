@@ -43,7 +43,10 @@ extension NewArrivalsTableViewCell: UICollectionViewDelegateFlowLayout, UICollec
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "NewArrival", for: indexPath) as! NewArrivalCollectionViewCell
         let makeup = makeupList?[indexPath.item]
-        cell.setupCellItem(makeup: makeup ?? Makeup(id: 0, brand: "", productType: .blush, imageLink: "", name: "", price: "", priceSign: "", description: ""))
+        if let makeup = makeup {
+            let viewModel = NewArrivalsViewModel(makeup: makeup)
+            cell.configure(viewModel: viewModel)
+        }
         return cell
     }
     

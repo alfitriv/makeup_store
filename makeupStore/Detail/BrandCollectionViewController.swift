@@ -45,7 +45,8 @@ extension BrandCollectionViewController: UICollectionViewDataSource, UICollectio
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "BrandCell", for: indexPath) as! NewArrivalCollectionViewCell
         if let makeup = makeupList?[indexPath.item] {
-           cell.setupCellItem(makeup: makeup)
+            let viewModel = NewArrivalsViewModel(makeup: makeup)
+            cell.configure(viewModel: viewModel)
         }
         return cell
     }

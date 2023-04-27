@@ -34,7 +34,8 @@ extension ItemSuggestionTableViewCell: UICollectionViewDataSource, UICollectionV
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "BestSeller", for: indexPath) as! BestSellersCollectionViewCell
         if let makeup = makeupList?[indexPath.item] {
-            cell.setupCell(makeup: makeup)
+            let viewModel = BestSellerViewModel(makeup: makeup)
+            cell.configure(viewModel: viewModel)
         }
         return cell
     }
