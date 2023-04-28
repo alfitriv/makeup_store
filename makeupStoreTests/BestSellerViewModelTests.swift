@@ -22,7 +22,7 @@ final class BestSellerViewModelTests: XCTestCase {
     
     func testFetchMakeupName() {
         _ = sut.makeupName
-        XCTAssertNotNil(sut, "The name is returned in view model")
+        XCTAssertNotNil(sut, "The name is not nil in view model")
     }
 
 }
